@@ -1,11 +1,12 @@
 //var createError = require('http-errors');
 var express = require('express');
-var path = require('path');
+var middleware = require('middleware');
 //var cookieParser = require('cookie-parser');
 //var logger = require('morgan');
 
 //var indexRouter = require('./routes/index');
 //var usersRouter = require('./routes/users');
+const idtokenRouter = require('./routes/idtoken');
 
 var app = express();
 
@@ -17,11 +18,11 @@ var app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 //app.use(cookieParser());
-app.use('/', express.static(path.join(__dirname, 'public')));
-
+app.use('/', express.static(__dirname + '/public'));
+app.use(middleware.verifyIdToken);
 //app.use('/', indexRouter);
 //app.use('/users', usersRouter);
-
+app.use('/idtoken', idtokenRouter);
 // catch 404 and forward to error handler
 /*
 app.use(function(req, res, next) {
