@@ -1,6 +1,6 @@
 //var createError = require('http-errors');
 var express = require('express');
-var middleware = require('middleware');
+var middleware = require('./middleware');
 //var cookieParser = require('cookie-parser');
 //var logger = require('morgan');
 
