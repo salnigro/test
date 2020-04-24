@@ -1,11 +1,11 @@
 function onSignIn(googleUser) {
-  var authResponse = googleUser.getAuthRespone();
+  var authResponse = googleUser.getAuthResponse();
     var profile = googleUser.getBasicProfile();
     console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
     console.log('Name: ' + profile.getName());
     console.log('Image URL: ' + profile.getImageUrl());
     console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-    console.log('idtoken = ',  authResponse.id_token)
+    console.log('idtoken = ',  authResponse.id_token);
 }
 
 function signOut() {
