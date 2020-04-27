@@ -7,6 +7,7 @@ var middleware = require('./middlewares');
 //var indexRouter = require('./routes/index');
 //var usersRouter = require('./routes/users');
 const idtokenRouter = require('./routes/idtoken');
+var todoRouter = require('./routes/todo');
 
 var app = express();
 
@@ -23,6 +24,7 @@ app.use(middleware.verifyIdToken);
 //app.use('/', indexRouter);
 //app.use('/users', usersRouter);
 app.use('/idtoken', idtokenRouter);
+app.use('/todo', todoRouter);
 // catch 404 and forward to error handler
 /*
 app.use(function(req, res, next) {
