@@ -44,11 +44,6 @@ SELECT * FROM users
 SELECT * FROM todo
     ORDER BY userid;
 
-SELECT * FROM todo
-INSERT INTO todo(userid, todo, stamp)
-VALUES (111393713032104198938, 'Something', current_timestamp)
-WHERE todoid = '1';
-
 DELETE FROM users
 WHERE userid = '112843048837006035357';
 
@@ -64,5 +59,11 @@ update todo
                  when 1 then (select userid from todo where todoid = 2)
               end
 
-update todo set todoid = (case todoid when 1 then 2 when 2 then 1 else todoid end)
-where todoid in (1,2);
+update todo set todoid = (case todoid when 5 then 1 else todoid end)
+where todoid in (1,5);
+
+DELETE FROM todo
+WHERE userid = '111393713032104198938';
+
+INSERT INTO users(userid, given_name, family_name, imageurl, email)
+VALUES(111393713032104198938, 'Sal', 'Nigro', 'fdsf.jpg', 'salnigro627@gmail.com')

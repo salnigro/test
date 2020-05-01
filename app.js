@@ -7,7 +7,7 @@ var middleware = require('./middlewares');
 //var indexRouter = require('./routes/index');
 //var usersRouter = require('./routes/users');
 const idtokenRouter = require('./routes/idtoken');
-const todoRouter = require('./routes/todo');
+var todoRouter = require('./routes/todo');
 
 var app = express();
 
