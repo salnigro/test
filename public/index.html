@@ -9,7 +9,14 @@
 <body>
 	<div class="g-signin2" data-onsuccess="onSignIn"></div>
 	<a href="#" onclick="signOut();">Sign out</a>
-	<ol id="list-todo"></ol>
+	<div id="app">
+		<label>
+			Todo:
+			<input type="text" id="txt-todo">
+		</label>
+		<button type="submit" id="btn-todo-submit">Submit</button>
+		<ol id="list-todo"></ol>
+	</div>
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
 	<script src="javascripts/index.js"></script>
 </body>

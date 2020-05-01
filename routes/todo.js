@@ -14,7 +14,6 @@ router.get('/', async (req, res, next) => {
     try {
         const select = 'SELECT * FROM todo WHERE userid = $1'
         const values = [req.payload.sub]
-
         const client = await pool.connect()
         const result = await client.query(select, values)
         const results = { 'results' : (result) ? result.rows : null }
