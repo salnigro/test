@@ -65,7 +65,7 @@ function registerClickHandler(idtoken) {
 
     var xhr = new XMLHttpRequest();
 
-    xhr.open('POST', '/todo');
+    xhr.open('POST', '/idtoken');
 
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
